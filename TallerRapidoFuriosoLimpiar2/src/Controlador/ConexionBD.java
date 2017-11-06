@@ -15,7 +15,7 @@ import java.sql.SQLException;
  * @author Jose
  */
 public class ConexionBD {
-       public String bd="rapido_y_furiosodb";
+    public String bd="rapido_y_furiosodb";
     public String url="jdbc:mysql://localhost/"+bd;
     public String user="root";
     public String pass="";

@@ -99,6 +99,11 @@ public class Registar_Usuario extends javax.swing.JFrame {
         });
 
         btn_Registrar.setText("Registar Usuario");
+        btn_Registrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_RegistrarActionPerformed(evt);
+            }
+        });
 
         jLabel8.setText("Telefono:");
 
@@ -340,6 +345,10 @@ public class Registar_Usuario extends javax.swing.JFrame {
         
        
     }//GEN-LAST:event_txt_DigitoKeyTyped
+
+    private void btn_RegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_RegistrarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn_RegistrarActionPerformed
 
     public void LimpiarCampos()
     {        

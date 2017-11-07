@@ -5,7 +5,7 @@
  */
 package Vista;
 
-import Controlador.ConexionBD;
+import Modelo.ConexionBD;
 import Vista.Usuario.Registar_Usuario;
 import Talleres.Eliminar_Mecanico;
 

@@ -1,6 +1,6 @@
 package Vista.Usuario;
-public class Registar_Usuario extends javax.swing.JFrame {
-    public Registar_Usuario() {
+public class Registrar_Usuario extends javax.swing.JFrame {
+    public Registrar_Usuario() {
         initComponents();
     }
     @SuppressWarnings("unchecked")
@@ -378,30 +378,31 @@ public class Registar_Usuario extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Registar_Usuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Registrar_Usuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Registar_Usuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Registrar_Usuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Registar_Usuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Registrar_Usuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Registar_Usuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Registrar_Usuario.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Registar_Usuario().setVisible(true);
+                new Registrar_Usuario().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btn_Limpiar;
-    private javax.swing.JButton btn_Registrar;
-    private javax.swing.JToggleButton btn_Salir;
-    private javax.swing.JComboBox<String> comboCiudad;
-    private javax.swing.JComboBox<String> comboComuna;
+    public javax.swing.JButton btn_Limpiar;
+    public javax.swing.JButton btn_Registrar;
+    public javax.swing.JToggleButton btn_Salir;
+    public javax.swing.JComboBox<String> comboCiudad;
+    public javax.swing.JComboBox<String> comboComuna;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
@@ -413,12 +414,12 @@ public class Registar_Usuario extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField txt_Apellido_Materno;
-    private javax.swing.JTextField txt_Apellido_Paterno;
-    private javax.swing.JTextField txt_Digito;
-    private javax.swing.JTextField txt_Direccion;
-    private javax.swing.JTextField txt_Nombre;
-    private javax.swing.JTextField txt_RutCliente;
-    private javax.swing.JTextField txt_Telefono;
+    public javax.swing.JTextField txt_Apellido_Materno;
+    public javax.swing.JTextField txt_Apellido_Paterno;
+    public javax.swing.JTextField txt_Digito;
+    public javax.swing.JTextField txt_Direccion;
+    public javax.swing.JTextField txt_Nombre;
+    public javax.swing.JTextField txt_RutCliente;
+    public javax.swing.JTextField txt_Telefono;
     // End of variables declaration//GEN-END:variables
 }

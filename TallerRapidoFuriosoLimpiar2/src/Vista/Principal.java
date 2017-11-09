@@ -6,7 +6,7 @@
 package Vista;
 
 import Modelo.ConexionBD;
-import Vista.Usuario.Registar_Usuario;
+import Vista.Usuario.Registrar_Usuario;
 import Talleres.Eliminar_Mecanico;
 
 import Talleres.Ingresar_Nuevo_Mecanico;
@@ -491,7 +491,7 @@ C.setVisible(true);
     }//GEN-LAST:event_BTModificarRutActionPerformed
 
     private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
-        Registar_Usuario R=new Registar_Usuario();
+        Registrar_Usuario R=new Registrar_Usuario();
         R.setVisible(true);
     }//GEN-LAST:event_jMenuItem3ActionPerformed
 

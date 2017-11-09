@@ -5,29 +5,30 @@
  */
 package Modelo;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 /**
  *
  * @author RenéIgnacio
  */
-public class CRUD_Cliente extends ConexionBD { 
-    
-    public boolean insertarCliente(Cliente c){
+public class CRUD_Comuna extends ConexionBD {
+   
+    public boolean insertarComuna(Comuna c){
         
         PreparedStatement ps =  null;
         Connection conn = getConnection();
         
-        String sql = "INSERT INTO CLIENTE (codigo_cliente, nombre, apellido_p, apellido_M, direccion, id_comuna)" +
-                    "VALUES(?,?,?,?,?,?)";
+        String sql = "INSERT INTO COMUNA (id_comuna, id_ciudad, nombre_comuna)" +
+                    "VALUES(?,?,?)";
         try{
             ps = conn.prepareStatement(sql);
-            ps.setInt(1, c.getCodCliente());
-            ps.setString(2, c.getNombre());
-            ps.setString(3, c.getApellidoP());
-            ps.setString(4, c.getApellidoM());
-            ps.setString(5,c.getDireccion());
-            ps.setInt(6, c.getId_comuna());
+            ps.setInt(1, c.getCod());
+            ps.setInt(2, c.getCod_ciudad());
+            ps.setString(3, c.getNombre_comuna());
+            
             ps.execute();
             return true;
         }catch(SQLException e){
@@ -43,21 +44,19 @@ public class CRUD_Cliente extends ConexionBD {
 
     }
     
-    public boolean modificarCliente(Cliente c){
+    public boolean modificarComuna(Comuna c){
         PreparedStatement ps =  null;
         Connection conn = getConnection();
         
-        String sql = "UPDATE CLIENTE SET codigo_cliente=?, nombre=?, apellido_P=?, apellido_M=?, direccion=?, id_comuna=? "+
-                     "where codigo_cliente=?";
+        String sql = "UPDATE COMUNA SET id_comuna=?, id_ciudad=?, nombre_comuna=?"+
+                     "where id_comuna=?";
         try{
             ps = conn.prepareStatement(sql);
-            ps.setInt(1, c.getCodCliente());
-            ps.setString(2, c.getNombre());
-            ps.setString(3, c.getApellidoP());
-            ps.setString(4, c.getApellidoM());
-            ps.setString(5,c.getDireccion());
-            ps.setInt(6, c.getId_comuna());
-            ps.setInt(7, c.getCodCliente());
+            ps.setInt(1, c.getCod());
+            ps.setInt(2, c.getCod_ciudad());
+            ps.setString(3, c.getNombre_comuna());
+          
+            ps.setInt(4, c.getCod());
             ps.execute();
             return true;
         }catch(SQLException e){
@@ -73,14 +72,14 @@ public class CRUD_Cliente extends ConexionBD {
 
     }
     
-    public boolean eliminarCliente(Cliente c){
+    public boolean eliminarCliente(Comuna c){
         PreparedStatement ps =  null;
         Connection conn = getConnection();
         
-        String sql = "DELETE FROM CLIENTE where codigo_cliente=?";
+        String sql = "DELETE FROM Comuna where id_comuna=?";
         try{
             ps = conn.prepareStatement(sql);
-            ps.setInt(1, c.getCodCliente());
+            ps.setInt(1, c.getCod());
             ps.execute();
             return true;
         }catch(SQLException e){
@@ -96,27 +95,23 @@ public class CRUD_Cliente extends ConexionBD {
 
     }
     
-    public boolean seleccionarCliente(Cliente c){
+    public boolean seleccionarComuna(Comuna c){
         PreparedStatement ps =  null;
         ResultSet rs = null;
         Connection conn = getConnection();
         
-        String sql = "SELECT * FROM CLIENTE where codigo_cliente=?";
+        String sql = "SELECT * FROM COMUNA where id_comuna=?";
         try{
             ps = conn.prepareStatement(sql);
-            ps.setInt(1, c.getCodCliente());
+            ps.setInt(1, c.getCod());
             rs = ps.executeQuery();
             
             if(rs.next()){
-                c.setCodCliente(Integer.parseInt(rs.getString("codigo_cliente")));
-                c.setNombre(rs.getString("nombre"));
-                c.setApellidoP(rs.getString("apellido_p"));
-                c.setApellidoM(rs.getString("apellido_m"));
-                c.setDireccion(rs.getString("direccion"));
-                c.setId_comuna(Integer.parseInt(rs.getString("id_comuna")));
+                c.setCod(Integer.parseInt(rs.getString("id_comuna")));
+                c.setCod_ciudad(Integer.parseInt(rs.getString("id_ciudad")));
+                c.setNombre_comuna(rs.getString("nombre_comuna"));
                 return true;
             }
-            
             return false;
         }catch(SQLException e){
             System.err.println(e);

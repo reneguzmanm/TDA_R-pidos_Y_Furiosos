@@ -1,4 +1,7 @@
 package Vista.Usuario;
+
+import javax.swing.JOptionPane;
+
 public class Registrar_Usuario extends javax.swing.JFrame {
     public Registrar_Usuario() {
         initComponents();
@@ -348,7 +351,35 @@ public class Registrar_Usuario extends javax.swing.JFrame {
     }//GEN-LAST:event_txt_DigitoKeyTyped
 
     private void btn_RegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_RegistrarActionPerformed
-        // TODO add your handling code here:
+       
+        if (txt_Nombre.getText().equals(""))
+            {
+                JOptionPane.showMessageDialog(null,"Ingrese Nombre");
+            }
+       if (txt_Apellido_Paterno.getText().equals(""))
+            {
+                JOptionPane.showMessageDialog(null,"Ingrese Apellido Paterno");
+            }
+       if (txt_Apellido_Materno.getText().equals(""))
+            {
+                JOptionPane.showMessageDialog(null,"Ingrese Apellido Materno");
+            }
+       if (txt_Direccion.getText().equals(""))
+            {
+                JOptionPane.showMessageDialog(null,"Ingrese Direccion");
+            }
+       if (txt_RutCliente.getText().equals(""))
+            {
+                JOptionPane.showMessageDialog(null,"Ingrese Rut");
+            }
+       if (txt_Digito.getText().equals(""))
+            {
+                JOptionPane.showMessageDialog(null,"Ingrese Digito");
+            }
+       if (txt_Telefono.getText().equals(""))
+            {
+                JOptionPane.showMessageDialog(null,"Ingrese Telefono");
+            }        // TODO add your handling code here:
     }//GEN-LAST:event_btn_RegistrarActionPerformed
 
     public void LimpiarCampos()

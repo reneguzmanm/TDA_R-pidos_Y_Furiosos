@@ -253,7 +253,8 @@ public class Registrar_Usuario extends javax.swing.JFrame {
         char c=evt.getKeyChar(); 
             if(Character.isDigit(c)) 
             { evt.consume();
-            } 
+            }
+            
     }//GEN-LAST:event_txt_NombreKeyTyped
 
     private void txt_Apellido_PaternoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_Apellido_PaternoKeyTyped

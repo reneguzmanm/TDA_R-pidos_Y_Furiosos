@@ -12,6 +12,7 @@ import java.sql.SQLException;
 
 /**
  *
+ * *
  * @author RenéIgnacio
  */
 public class CRUD_Ciudad extends ConexionBD {

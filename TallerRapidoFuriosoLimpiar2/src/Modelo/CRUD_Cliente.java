@@ -22,7 +22,7 @@ public class CRUD_Cliente extends ConexionBD {
                     "VALUES(?,?,?,?,?,?)";
         try{
             ps = conn.prepareStatement(sql);
-            ps.setInt(1, c.getCodCliente());
+            ps.setString(1, c.getRut_Cliente());
             ps.setString(2, c.getNombre());
             ps.setString(3, c.getApellidoP());
             ps.setString(4, c.getApellidoM());
@@ -51,13 +51,13 @@ public class CRUD_Cliente extends ConexionBD {
                      "where codigo_cliente=?";
         try{
             ps = conn.prepareStatement(sql);
-            ps.setInt(1, c.getCodCliente());
+            ps.setString(1, c.getRut_Cliente());
             ps.setString(2, c.getNombre());
             ps.setString(3, c.getApellidoP());
             ps.setString(4, c.getApellidoM());
             ps.setString(5,c.getDireccion());
             ps.setInt(6, c.getId_comuna());
-            ps.setInt(7, c.getCodCliente());
+            ps.setString(7, c.getRut_Cliente());
             ps.execute();
             return true;
         }catch(SQLException e){
@@ -80,7 +80,7 @@ public class CRUD_Cliente extends ConexionBD {
         String sql = "DELETE FROM CLIENTE where codigo_cliente=?";
         try{
             ps = conn.prepareStatement(sql);
-            ps.setInt(1, c.getCodCliente());
+            ps.setString(1, c.getRut_Cliente());
             ps.execute();
             return true;
         }catch(SQLException e){
@@ -104,11 +104,11 @@ public class CRUD_Cliente extends ConexionBD {
         String sql = "SELECT * FROM CLIENTE where codigo_cliente=?";
         try{
             ps = conn.prepareStatement(sql);
-            ps.setInt(1, c.getCodCliente());
+            ps.setString(1, c.getRut_Cliente());
             rs = ps.executeQuery();
             
             if(rs.next()){
-                c.setCodCliente(Integer.parseInt(rs.getString("codigo_cliente")));
+                c.setRut_Cliente(rs.getString("codigo_cliente"));
                 c.setNombre(rs.getString("nombre"));
                 c.setApellidoP(rs.getString("apellido_p"));
                 c.setApellidoM(rs.getString("apellido_m"));

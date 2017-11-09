@@ -10,19 +10,19 @@ package Modelo;
  * @author RenéIgnacio
  */
 public class Cliente {
-    private int codCliente;
+    private String rut_Cliente;
     private String nombre;
     private String apellidoP;
     private String apellidoM;
     private String direccion;
     private int id_comuna;
 
-    public int getCodCliente() {
-        return codCliente;
+    public String getRut_Cliente() {
+        return rut_Cliente;
     }
 
-    public void setCodCliente(int codCliente) {
-        this.codCliente = codCliente;
+    public void setRut_Cliente(String rut_Cliente) {
+        this.rut_Cliente = rut_Cliente;
     }
 
     public String getNombre() {
@@ -64,7 +64,4 @@ public class Cliente {
     public void setId_comuna(int id_comuna) {
         this.id_comuna = id_comuna;
     }
-    
-    
-    
 }

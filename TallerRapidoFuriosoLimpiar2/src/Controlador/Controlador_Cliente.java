@@ -33,6 +33,11 @@ public class Controlador_Cliente implements ActionListener {
     public void actionPerformed(ActionEvent e){
         
         if(e.getSource() == frmReg.btn_Registrar){
+            cl.setRut_Cliente(frmReg.txt_RutCliente.getText());
+            cl.setNombre(frmReg.txt_Nombre.getText());
+            cl.setApellidoP(frmReg.txt_Apellido_Paterno.getText());
+            cl.setApellidoM(frmReg.txt_Apellido_Materno.getText());
+            cl.setDireccion(frmReg.txt_Direccion.getText());
             
         }
     }

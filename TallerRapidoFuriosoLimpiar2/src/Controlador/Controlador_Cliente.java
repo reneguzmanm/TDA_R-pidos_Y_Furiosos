@@ -24,9 +24,9 @@ public class Controlador_Cliente implements ActionListener {
         this.cl = cl;
         this.crud_cl = crud_cl;
         this.frmReg = frmReg;
-        this.frmReg.btn_Limpiar.addActionListener(this);
-        this.frmReg.btn_Registrar.addActionListener(this);
-        this.frmReg.btn_Exit.addActionListener(this);
+        this.frmReg.btn_Limp.addActionListener(this);
+        this.frmReg.btn_Reg.addActionListener(this);
+        this.frmReg.btn_Salir.addActionListener(this);
     }
 
 
@@ -35,7 +35,7 @@ public class Controlador_Cliente implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e){
         
-        if(e.getSource() == frmReg.btn_Registrar){
+        if(e.getSource() == frmReg.btn_Reg){
             cl.setRut_Cliente(frmReg.txt_RutCliente.getText());
             cl.setNombre(frmReg.txt_Nombre.getText());
             cl.setApellidoP(frmReg.txt_Apellido_Paterno.getText());

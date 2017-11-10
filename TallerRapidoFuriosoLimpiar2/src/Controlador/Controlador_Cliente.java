@@ -26,8 +26,11 @@ public class Controlador_Cliente implements ActionListener {
         this.frmReg = frmReg;
         this.frmReg.btn_Limpiar.addActionListener(this);
         this.frmReg.btn_Registrar.addActionListener(this);
-        
+        this.frmReg.btn_Exit.addActionListener(this);
     }
+
+
+
     
     @Override
     public void actionPerformed(ActionEvent e){
